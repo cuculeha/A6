@@ -43,12 +43,16 @@ int main (){
 	foundPosition = lookUpPlayer (teamPlayers);
         if (foundPosition != -1)
 	{
+		cout << "***********************\n";
 		cout << "Data found\n";
+		cout << "***********************\n";
 	}
 
 	else
 	{
+		cout << "***********************\n";
 		cout << "Data not found\n";	
+		cout << "***********************\n";
 	}
 		
         break;
