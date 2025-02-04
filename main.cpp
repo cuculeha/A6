@@ -138,8 +138,8 @@ int lookUpPlayer (const playerType list [])
 
 void editPlayer (playerType list [])
 {
-	int index;
-
+	int index;     // index returned if search function found data
+	int choice;    // choice for editplayer menu
 	// Call look up function to get the index
 	index = lookUpPlayer (list);
 
@@ -153,13 +153,53 @@ void editPlayer (playerType list [])
 		cout << "* <3> Edit Number of Touchdowns         : " << list[index].numTouchDowns << endl;
 		cout << "* <4> Edit Number of Catches            : " << list[index].numCatches << endl;
 		cout << "* <5> Edit Number of Passing Yards      : " << list[index].numPassing << endl;
-		cout << "* <6> Edit Number of ReceivingYards     : " << list[index].numReceiving << endl;
+		cout << "* <6> Edit Number of Receiving Yards    : " << list[index].numReceiving << endl;
 		cout << "* <7> Edit Number of Rushing Yards      : " << list[index].numRushing << endl;
 		cout << "* <8> Back To Main Menu                 *\n";
 		cout << "*****************************************\n";
+		cout << "* Choice (1-4) : ";
+		cin >> choice;
+		cin.ignore();
+		
+		switch (choice);
+		case 1:
+		cout << "Edit *New* Name : ";
+		getline (cin, list[index].name )
+		break;
 
-	
+		case 2:
+		cout << "Edit *New* Position : ";
+		getline (cin, list[index].position )
+		break;
+
+		case 3:
+		cout << "Edit *New* Number of Touchdowns : ";
+		getline (cin, list[index].numTouchDowns )
+		break;
+		
+		case 4:
+		cout << "Edit *New* Number of Catches  : ";
+		getline (cin, list[index].numCatches )
+		break;
+
+		case 5:
+		cout << "Edit *New* Number of Passing Yards : ";
+		getline (cin, list[index].numPassing )
+		break;
+
+		case 6:
+		cout << "Edit *New* Number of Receiving Yards : ";
+		getline (cin, list[index].numReceiving )
+		break;
+
+		case 7:
+		cout << "Edit *New* Number of Rushing Yards : ";
+		getline (cin, list[index].numRushing )
+		break;
+		
+		case 8:
+			return;
+		break;	
 	}
-	
 	return;
 }
