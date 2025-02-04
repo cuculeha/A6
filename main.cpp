@@ -161,7 +161,8 @@ void editPlayer (playerType list [])
 		cin >> choice;
 		cin.ignore();
 		
-		switch (choice);
+		switch (choice)
+		{
 		case 1:
 		cout << "Edit *New* Name : ";
 		getline (cin, list[index].name )
@@ -200,6 +201,8 @@ void editPlayer (playerType list [])
 		case 8:
 			return;
 		break;	
+		}
+	
 	}
 	return;
 }
