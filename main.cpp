@@ -143,7 +143,7 @@ void editPlayer (playerType list [])
 	// Call look up function to get the index
 	index = lookUpPlayer (list);
 
-	if (index != -1);
+	if (index != -1)
 	{
 		cout << list[index].name << endl;	
 		cout << list[index].position << endl;	
@@ -155,4 +155,5 @@ void editPlayer (playerType list [])
 	
 	}
 	
+	return;
 }
