@@ -28,7 +28,7 @@ int main (){
 
 	// Start displaying menu
   do {
-	  
+	system ("clear");
     cout << "\n********************************************\n";
     cout << "Assignment A5 : Structs                    *\n";
     cout << "*                                          *\n";
