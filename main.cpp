@@ -64,11 +64,10 @@ int main (){
         case 4:
         cout << "Quitted\n";
       }
-	  system("clear");
           
   }
 
-  while ( input != 4);
+  while ( input != 4 );
 
 }
 
@@ -128,5 +127,4 @@ int lookUpPlayer (playerType list [])
 
 	// worst case: string not found
 	return -1;
-	
 }
