@@ -1,6 +1,4 @@
 // Working on a football assignment
-
-
 #include <iostream>
 #include <fstream>
 #include "playerType.h"
@@ -10,15 +8,21 @@ const int SIZE =  10 ;
 
 void readData (playerType list []);
 
+const int ARRAYSIZE;
+
 int main (){
 
   int input;
+<<<<<<< HEAD
 	playerType teamPlayers[10];
 
 	// Read players data from the txt file
 	readData (teamPlayers);
 
 	// Start displaying menu
+=======
+  playerType teamPlayers[ARRAYSIZE];
+>>>>>>> 2e1db9714fd6b565bc507d5e77149e01a6be9260
   do {
 
     cout << "********************************************\n";
