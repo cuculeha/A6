@@ -1,6 +1,7 @@
 // Working on a football assignment
 #include <iostream>
 #include <fstream>
+#include <cstring>
 #include "playerType.h"
 
 using namespace std;
@@ -89,7 +90,7 @@ void readData (playerType list[])
 	return;
 }
 
-void lookUpPlayer (playerType list [])
+int lookUpPlayer (playerType list [])
 {
 	string toSearch;
 	int index = 0; 
