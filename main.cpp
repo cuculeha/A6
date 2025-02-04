@@ -96,6 +96,7 @@ int lookUpPlayer (playerType list [])
 	string toSearch;
 	int index = 0; 
 	cout << "Search : ";
+	cin.ignore();
 	getline (cin, toSearch );
 
 	// Attempting to find the partial string in data.
