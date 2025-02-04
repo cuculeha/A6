@@ -66,13 +66,14 @@ void readData (playerType list[])
 	int i = 0;
 	while (i < SIZE && getline (inData, list[i].name))
 		{
-			cin.get(list[i].position, 3);
+			inData.get(list[i].position, 3);
 			inData >> list[i].numTouchDowns;
 			inData >> list[i].numCatches;
 			inData >> list[i].numPassing;
 			inData >> list[i].numReceiving;
 			inData >> list[i].numRushing;
 
+			cout << "Entered Data\n";
 			cout << list[i].name << endl;
 			cout << list[i].position << endl;
 			cout << list[i].numTouchDowns << endl;
@@ -82,6 +83,8 @@ void readData (playerType list[])
 			cout << list[i].numRushing << endl;
 
 			i++;
+			cout << "press any key to continue\n";
+			cin.ignore():
 		}
 	inData.close();
 	return;
