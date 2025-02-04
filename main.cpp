@@ -10,7 +10,7 @@ int main (){
     int input;
     
     cout << "********************************************\n";
-    cout << "Assignment A5 : Structs                    *\n""
+    cout << "Assignment A5 : Structs                    *\n";
     cout << "*                                          *\n";
     cout << "* <1> Look Up a Player                     *\n";
     cout << "* <2> Edit a Player                        *\n";
