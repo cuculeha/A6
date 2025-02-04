@@ -84,7 +84,7 @@ void readData (playerType list[])
 
 			i++;
 			cout << "press any key to continue\n";
-			cin.ignore():
+			cin.ignore();
 		}
 	inData.close();
 	return;
