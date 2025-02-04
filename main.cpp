@@ -22,7 +22,7 @@ int main (){
 	// Start displaying menu
   do {
 
-    cout << "********************************************\n";
+    cout << "\n********************************************\n";
     cout << "Assignment A5 : Structs                    *\n";
     cout << "*                                          *\n";
     cout << "* <1> Look Up a Player                     *\n";
@@ -32,7 +32,9 @@ int main (){
     cout << "********************************************\n";
     cout << "* Choice (1-4) : ";
     cin >> input;
+    cin.ignore();
 
+	  
     switch (input)
       {
         case 1:
@@ -96,7 +98,6 @@ int lookUpPlayer (playerType list [])
 	string toSearch;
 	int index = 0; 
 	cout << "Search : ";
-	cin.ignore();
 	getline (cin, toSearch );
 
 	// Attempting to find the partial string in data.
