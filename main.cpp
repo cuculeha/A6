@@ -41,6 +41,6 @@ int main (){
           
   }
 
-  while (input! = 4);
+  while ( input != 4);
 
 }
