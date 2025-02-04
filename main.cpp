@@ -12,10 +12,10 @@ void readData (playerType list []);
 int lookUpPlayer (playerType list []);
 
 int main (){
-
-  int input;
+  	int input;
 	playerType teamPlayers[10];
 	int foundPosition;
+	
 	// Read players data from the txt file
 	readData (teamPlayers);
 
