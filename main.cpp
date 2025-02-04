@@ -170,32 +170,32 @@ void editPlayer (playerType list [])
 
 		case 2:
 		cout << "Edit *New* Position : ";
-		getline (cin, list[index].position )
+		cin.get( list[index].position , 3 );
 		break;
 
 		case 3:
 		cout << "Edit *New* Number of Touchdowns : ";
-		getline (cin, list[index].numTouchDowns )
+		cin >> list[index].numTouchDowns;
 		break;
 		
 		case 4:
 		cout << "Edit *New* Number of Catches  : ";
-		getline (cin, list[index].numCatches )
+		cin >> list[index].numCatches
 		break;
 
 		case 5:
 		cout << "Edit *New* Number of Passing Yards : ";
-		getline (cin, list[index].numPassing )
+		cin >> list[index].numPassing;
 		break;
 
 		case 6:
 		cout << "Edit *New* Number of Receiving Yards : ";
-		getline (cin, list[index].numReceiving )
+		cin >> list[index].numReceiving;
 		break;
 
 		case 7:
 		cout << "Edit *New* Number of Rushing Yards : ";
-		getline (cin, list[index].numRushing )
+		cin >> list[index].numRushing ;
 		break;
 		
 		case 8:
