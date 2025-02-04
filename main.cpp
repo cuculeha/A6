@@ -22,20 +22,20 @@ int main (){
 
     switch (input)
       {
-        case 1;
+        case 1:
         // Look up for player
         cout << "Look up a player\n";
         break;
         
-        case 2;
+        case 2:
         cout << "Edit a player\n";
         break;
         
-        case 3;
+        case 3:
         cout << "Print Team Roster\n";
         break;
         
-        case 4;
+        case 4:
         cout << "Quitted\n";
       }
           
