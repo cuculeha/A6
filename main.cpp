@@ -2,11 +2,23 @@
 
 
 #include <iostream>
+#include <fstream>
+#include "playerType.h"
 
 using namespace std;
+const int SIZE =  10 ;
+
+void readData (playerType list []);
 
 int main (){
+
   int input;
+	playerType teamPlayers[10];
+
+	// Read players data from the txt file
+	readData (teamPlayers);
+
+	// Start displaying menu
   do {
 
     cout << "********************************************\n";
@@ -43,4 +55,24 @@ int main (){
 
   while ( input != 4);
 
+}
+
+
+void readData (playerType list[])
+{
+	ifstream inData;
+	inData.open ("input.txt");
+	int index = 0;
+	while (index < SIZE && getline (inData, list[i].name)
+		{
+			getline (inData, list[i].position);
+			inData >> list[index].numTouchDowns;
+			inData >> list[index].numCatches;
+			inData >> list[index].numPassing;
+			inData >> list[index].numReceiving;
+			inData >> list[index].numRushing;
+
+			cout << list[index].name << endl; 
+
+		}
 }
