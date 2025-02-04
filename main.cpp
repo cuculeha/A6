@@ -72,8 +72,8 @@ void readData (playerType list[])
 			inData >> list[i].numPassing;
 			inData >> list[i].numReceiving;
 			inData >> list[i].numRushing;
-			cin.ignore();
-
+			inData.ignore();
+			
 			cout << "Entered Data\n";
 			cout << list[i].name << endl;
 			cout << list[i].position << endl;
