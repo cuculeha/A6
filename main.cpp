@@ -40,8 +40,15 @@ int main (){
     cout << "* Choice (1-4) : ";
     cin >> input;
     cin.ignore();
-
 	  
+	// handle input validation
+	  while (input < 1 || input > 4)
+		  {
+			  cout << "Only enter Choice (1-4) : ";
+			  cin >> input;
+    			  cin.ignore();
+		  }
+	   
     switch (input)
       {
         case 1:
@@ -78,8 +85,9 @@ int main (){
           
   }
 
-  while ( input != 4 );
+  	while ( input != 4 );
 
+	return 0;
 }
 
 
@@ -164,6 +172,14 @@ void editPlayer (playerType list [])
 		cout << "* Choice (1-8) : ";
 		cin >> choice;
 		cin.ignore();
+
+		// handle input validation
+	 	 while (input < 1 || input > 8)
+		  {
+			  cout << "Only enter Choice (1-8) : ";
+			  cin >> choice;
+    			  cin.ignore();
+		  }
 		
 		switch (choice)
 		{
