@@ -3,6 +3,7 @@
 #include <fstream>
 #include <cstring>
 #include <cctype>
+#include <algorithm>      // To make strings uppercase version
 #include "playerType.h"
 
 using namespace std;
