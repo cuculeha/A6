@@ -6,9 +6,9 @@
 using namespace std;
 
 int main (){
+  int input;
   do {
-    int input;
-    
+
     cout << "********************************************\n";
     cout << "Assignment A5 : Structs                    *\n";
     cout << "*                                          *\n";
