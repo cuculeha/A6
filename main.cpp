@@ -14,7 +14,9 @@ const int SIZE =  10 ;
 void readData (playerType list []);
 int lookUpPlayer (const playerType list []);
 void editPlayer (playerType list []);
-void PrintTeam (const playerType list []);
+void printTeam (const playerType list []);
+void printPlayer (const string name, const char pos[], const int TDs, const int catches, const int passYds, const int recvYads, const int rushYds);
+
 
 int main (){
   	int input;
@@ -67,7 +69,7 @@ int main (){
         break;
         
         case 3:
-        PrintTeam (teamPlayers);
+        printTeam (teamPlayers);
         break;
         
         case 4:
@@ -210,7 +212,7 @@ void editPlayer (playerType list [])
 }
 
 
-void PrintTeam (const playerType list [])
+void printTeam (const playerType list [])
 {
 	// Header
 	cout << "Team consists of following players\n";
@@ -220,10 +222,28 @@ void PrintTeam (const playerType list [])
 	cout << setw (7) << left << "Catches";
 	cout << setw (7) << right << "Pass";
 	cout << setw (7) << right << "Recv";
-	cout << setw (7) << right << "Rush\n";
+	cout << setw (8) << right << "Rush\n";
 	cout << setw (44) << right << "Yds";
 	cout << setw (7) << right << "Yds";
 	cout << setw (8) << right << "Yds";
-	
 
+	// Call print Player function to print it one by one
+	for (int i= 0 ; i < SIZE ; i++)
+		{
+			cout << "\n-----------------------------------------------------------\n";
+			printPlayer (list[i].name, list[i].position, list[i].numTouchDowns, list [i].numCatches, list[i]. numPassing,
+				list[i].numReceiving, list[i].numRushing);
+		}
+	return;
+}
+
+void printPlayer (const string name, const char pos[], const int TDs, const int catches, const int passYds, const int recvYads, const int rushYds)
+{
+	cout << setw (20) << left << name;
+	cout << setw (5) << right << pos;
+	cout << setw (5) << right << TDS;
+	cout << setw (7) << right << catches;
+	cout << setw(7) << right passYds;
+	cout << setw(7) << right recvYads;
+	cout << setw(7) << right rushYds;
 }
