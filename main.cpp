@@ -145,13 +145,18 @@ void editPlayer (playerType list [])
 
 	if (index != -1)
 	{
-		cout << list[index].name << endl;	
-		cout << list[index].position << endl;	
-		cout << list[index].numTouchDowns << endl;	
-		cout << list[index].numCatches << endl;	
-		cout << list[index].numPassing << endl;	
-		cout << list[index].numReceiving << endl;
-		cout << list[index].numRushing << endl;
+		cout << "*****************************************\n";
+		cout << "* Edit a Player                         *\n";
+		cout << "*****************************************\n" << "CURRENT VALUES\n";
+		cout << "* <1> Edit Name                         : " << cout << list[index].name << endl;
+		cout << "* <2> Edit Position                     : " << cout << list[index].position << endl;
+		cout << "* <3> Edit Number of Touchdowns         : " << cout << list[index].numTouchDowns << endl;
+		cout << "* <4> Edit Number of Catches            : " << cout << list[index].numCatches << endl;
+		cout << "* <5> Edit Number of Passing Yards      : " << cout << list[index].numPassing << endl;
+		cout << "* <6> Edit Number of ReceivingYards     : " << cout << list[index].numReceiving << endl;
+		cout << "* <7> Edit Number of Pushing Yards      : " << cout << list[index].numRushing << endl;
+		cout << "* <8> Back To Main Menu                 : " << cout << list[index].numReceiving << endl;
+
 	
 	}
 	
