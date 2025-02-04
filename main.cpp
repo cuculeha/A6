@@ -11,7 +11,8 @@ using namespace std;
 const int SIZE =  10 ;
 
 void readData (playerType list []);
-int lookUpPlayer (playerType list []);
+int lookUpPlayer (const playerType list []);
+void editPlayer (playerType list []);
 
 int main (){
   	int input;
@@ -23,7 +24,6 @@ int main (){
 
 	// Start displaying menu
   do {
-    system("clear");
 	  
     cout << "\n********************************************\n";
     cout << "Assignment A5 : Structs                    *\n";
@@ -60,7 +60,8 @@ int main (){
         break;
         
         case 2:
-        cout << "Edit a player\n";
+	// Edit a player
+		editPlayer (teamPlayers);
         break;
         
         case 3:
@@ -100,7 +101,7 @@ void readData (playerType list[])
 	return;
 }
 
-int lookUpPlayer (playerType list [])
+int lookUpPlayer (const playerType list [])
 {
 	string toSearch;
 	int index = 0; 
@@ -133,4 +134,25 @@ int lookUpPlayer (playerType list [])
 
 	// worst case: string not found
 	return -1;
+}
+
+void editPlayer (playerType list [])
+{
+	int index;
+
+	// Call look up function to get the index
+	index = lookUpPlayer (teamPlayers);
+
+	if (index != - 1);
+	{
+		cout << list[index].name << endl;	
+		cout << list[index].position << endl;	
+		cout << list[index].numTouchDowns << endl;	
+		cout << list[index].numCatches << endl;	
+		cout << list[index].numPassing << endl;	
+		cout << list[index].numReceiving << endl;
+		cout << list[index].numRushing << endl;
+	
+	}
+	
 }
