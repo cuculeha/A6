@@ -102,7 +102,7 @@ int lookUpPlayer (playerType list [])
 	while (index < 0 )
 	{
 		// best case: string found
-		if (list[index].find (toSearch) != string::npos )
+		if (list[index].name.find (toSearch) != string::npos )
 			return index;
 	}
 
