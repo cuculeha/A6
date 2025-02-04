@@ -101,7 +101,7 @@ int lookUpPlayer (playerType list [])
 	getline (cin, toSearch );
 
 	// Attempting to find the partial string in data.
-	while (index < 0 )
+	while (index < SIZE )
 	{
 		// best case: string found
 		if (list[index].name.find (toSearch) != string::npos )
