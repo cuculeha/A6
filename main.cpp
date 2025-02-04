@@ -165,7 +165,7 @@ void editPlayer (playerType list [])
 		{
 		case 1:
 		cout << "Edit *New* Name : ";
-		getline (cin, list[index].name )
+		getline (cin, list[index].name );
 		break;
 
 		case 2:
@@ -180,7 +180,7 @@ void editPlayer (playerType list [])
 		
 		case 4:
 		cout << "Edit *New* Number of Catches  : ";
-		cin >> list[index].numCatches
+		cin >> list[index].numCatches;
 		break;
 
 		case 5:
