@@ -5,6 +5,7 @@
 #include <cctype>
 #include <cstdlib>        // To clear the screen
 #include <algorithm>      // To make strings uppercase version
+#include <iomanip>        // formatting output
 #include "playerType.h"
 
 using namespace std;
@@ -13,6 +14,7 @@ const int SIZE =  10 ;
 void readData (playerType list []);
 int lookUpPlayer (const playerType list []);
 void editPlayer (playerType list []);
+void PrintTeam (const playerType list []);
 
 int main (){
   	int input;
@@ -65,7 +67,7 @@ int main (){
         break;
         
         case 3:
-        cout << "Print Team Roster\n";
+        PrintTeam (teamPlayers);
         break;
         
         case 4:
@@ -157,7 +159,7 @@ void editPlayer (playerType list [])
 		cout << "* <7> Edit Number of Rushing Yards      : " << list[index].numRushing << endl;
 		cout << "* <8> Back To Main Menu                 *\n";
 		cout << "*****************************************\n";
-		cout << "* Choice (1-4) : ";
+		cout << "* Choice (1-8) : ";
 		cin >> choice;
 		cin.ignore();
 		
@@ -205,4 +207,23 @@ void editPlayer (playerType list [])
 	
 	}
 	return;
+}
+
+
+void PrintTeam (const playerType list [])
+{
+	// Header
+	cout << "Team consists of following players\n";
+	cout << setw (20) << left << "Name";
+	cout << setw (5) << left << "Pos";
+	cout << setw (5) << left << "TDs";
+	cout << setw (7) << left << "Catches";
+	cout << setw (7) << right << "Pass";
+	cout << setw (7) << right << "Recv";
+	cout << setw (7) << right << "Rush\n";
+	cout << setw (44) << right << "Yds";
+	cout << setw (7) << right << "Yds";
+	cout << setw (7) << right << "Yds";
+	
+
 }
