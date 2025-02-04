@@ -65,7 +65,7 @@ void readData (playerType list[])
 	int i = 0;
 	while (i < SIZE && getline (inData, list[i].name))
 		{
-			getline (inData, list[i].position);
+			cin.get(list[i].position, 3);
 			inData >> list[i].numTouchDowns;
 			inData >> list[i].numCatches;
 			inData >> list[i].numPassing;
