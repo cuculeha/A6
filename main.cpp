@@ -63,7 +63,7 @@ void readData (playerType list[])
 	ifstream inData;
 	inData.open ("input.txt");
 	int i = 0;
-	while (index < SIZE && getline (inData, list[i].name))
+	while (i < SIZE && getline (inData, list[i].name))
 		{
 			getline (inData, list[i].position);
 			inData >> list[i].numTouchDowns;
@@ -72,14 +72,14 @@ void readData (playerType list[])
 			inData >> list[i].numReceiving;
 			inData >> list[i].numRushing;
 
-			cout << list[index].name << endl;
-			cout << list[index].position << endl;
-			cout << list[index].numTouchDowns << endl;
-			cout << list[index].numCatches << endl;
-			cout << list[index].numPassing << endl;
-			cout << list[index].numReceiving << endl;
-			cout << list[index].numRushing << endl;
+			cout << list[i].name << endl;
+			cout << list[i].position << endl;
+			cout << list[i].numTouchDowns << endl;
+			cout << list[i].numCatches << endl;
+			cout << list[i].numPassing << endl;
+			cout << list[i].numReceiving << endl;
+			cout << list[i].numRushing << endl;
 
-
+			i++;
 		}
 }
