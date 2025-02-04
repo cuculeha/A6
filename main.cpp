@@ -154,7 +154,7 @@ void editPlayer (playerType list [])
 		cout << "* <4> Edit Number of Catches            : " << list[index].numCatches << endl;
 		cout << "* <5> Edit Number of Passing Yards      : " << list[index].numPassing << endl;
 		cout << "* <6> Edit Number of ReceivingYards     : " << list[index].numReceiving << endl;
-		cout << "* <7> Edit Number of Pushing Yards      : " << list[index].numPushing << endl;
+		cout << "* <7> Edit Number of Rushing Yards      : " << list[index].numRushing << endl;
 		cout << "* <8> Back To Main Menu                 *\n";
 		cout << "*****************************************\n";
 
