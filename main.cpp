@@ -3,6 +3,7 @@
 #include <fstream>
 #include <cstring>
 #include <cctype>
+#include <cstdlib>        // To clear the screen
 #include <algorithm>      // To make strings uppercase version
 #include "playerType.h"
 
@@ -22,7 +23,7 @@ int main (){
 
 	// Start displaying menu
   do {
-
+    system("clear");
     cout << "\n********************************************\n";
     cout << "Assignment A5 : Structs                    *\n";
     cout << "*                                          *\n";
