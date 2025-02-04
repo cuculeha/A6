@@ -61,6 +61,7 @@ int main (){
 void readData (playerType list[])
 {
 	ifstream inData;
+	
 	inData.open ("input.txt");
 	int i = 0;
 	while (i < SIZE && getline (inData, list[i].name))
@@ -82,4 +83,6 @@ void readData (playerType list[])
 
 			i++;
 		}
+	inData.close();
+	return;
 }
