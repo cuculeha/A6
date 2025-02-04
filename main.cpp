@@ -7,14 +7,13 @@ using namespace std;
 const int SIZE =  10 ;
 
 void readData (playerType list []);
-
-const int ARRAYSIZE = 10;
+int lookUpPlayer (playerType list []);
 
 int main (){
 
   int input;
 	playerType teamPlayers[10];
-
+	int foundPosition;
 	// Read players data from the txt file
 	readData (teamPlayers);
 
@@ -36,7 +35,17 @@ int main (){
       {
         case 1:
         // Look up for player
-        cout << "Look up a player\n";
+	foundPosition = lookUpPlayer (teamPlayers);
+        if (foundPosition != -1)
+	{
+		cout << "Data found\n";
+	}
+
+	else
+	{
+		cout << "Data not found\n";	
+	}
+		
         break;
         
         case 2:
@@ -72,18 +81,30 @@ void readData (playerType list[])
 			inData >> list[i].numPassing;
 			inData >> list[i].numReceiving;
 			inData >> list[i].numRushing;
-			inData.ignore();
-			
-			cout << list[i].name << endl;
-			cout << list[i].position << endl;
-			cout << list[i].numTouchDowns << endl;
-			cout << list[i].numCatches << endl;
-			cout << list[i].numPassing << endl;
-			cout << list[i].numReceiving << endl;
-			cout << list[i].numRushing << endl;
+			inData.ignore();         // Remove newline left in buffer for next getline
 
 			i++;
 		}
 	inData.close();
 	return;
+}
+
+void lookUpPlayer (playerType list [])
+{
+	string toSearch;
+	int index = 0; 
+	cout << "Search : ";
+	getline (cin, toSearch );
+
+	// Attempting to find the partial string in data.
+	while (index < 0 )
+	{
+		// best case: string found
+		if (list[index].find (toSearch) != string::npos )
+			return index;
+	}
+
+	// worst case: string not found
+	return -1;
+	
 }
