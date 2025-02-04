@@ -1,12 +1,13 @@
 // Working on a football assignment
-
-
 #include <iostream>
 
 using namespace std;
 
+const int ARRAYSIZE;
+
 int main (){
   int input;
+  playerType teamPlayers[ARRAYSIZE];
   do {
 
     cout << "********************************************\n";
