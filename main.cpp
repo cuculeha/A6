@@ -223,7 +223,7 @@ void PrintTeam (const playerType list [])
 	cout << setw (7) << right << "Rush\n";
 	cout << setw (44) << right << "Yds";
 	cout << setw (7) << right << "Yds";
-	cout << setw (7) << right << "Yds";
+	cout << setw (8) << right << "Yds";
 	
 
 }
