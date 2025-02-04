@@ -174,7 +174,7 @@ void editPlayer (playerType list [])
 		cin.ignore();
 
 		// handle input validation
-	 	 while (input < 1 || input > 8)
+	 	 while (choice < 1 || choice > 8)
 		  {
 			  cout << "Only enter Choice (1-8) : ";
 			  cin >> choice;
