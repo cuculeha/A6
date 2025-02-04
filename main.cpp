@@ -234,6 +234,8 @@ void printTeam (const playerType list [])
 			printPlayer (list[i].name, list[i].position, list[i].numTouchDowns, list [i].numCatches, list[i]. numPassing,
 				list[i].numReceiving, list[i].numRushing);
 		}
+	cout << "Press any key to continue....\n";
+	cin.ignore();
 	return;
 }
 
