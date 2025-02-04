@@ -97,17 +97,30 @@ int lookUpPlayer (playerType list [])
 {
 	string toSearch;
 	int index = 0; 
+	string uppercasePlayers;          // hold temporary strings of uppercase data names
+	string uppercaseToSearch;         // hold temporary strings of uppercase search name
+
+	
 	cout << "Search : ";
 	getline (cin, toSearch );
 
 	// Attempting to find the partial string in data.
 	while (index < SIZE )
 	{
+		// make a copy of strings name and to search
+		uppercasePlayers = list[index].name;
+		uppercaseToSearch = toSearch;
+		
+		// convert both strings to uppercase.
+		transform(uppercasePlayers.begin(), uppercasePlayers.end(), uppercasePlayers.begin(), ::toupper);
+    		transform(uppercaseToSearch.begin(), uppercaseToSearch.end(), uppercaseToSearch.begin(), ::toupper);
+		
 		// best case: string found
-		if (list[index].name.find (toSearch) != string::npos )
+		if (uppercasePlayers.find (uppercaseToSearch) != string::npos )
 		{
 			return index;
 		}
+		
 		index++;
 	}
 
