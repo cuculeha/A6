@@ -105,7 +105,10 @@ int lookUpPlayer (playerType list [])
 	{
 		// best case: string found
 		if (list[index].name.find (toSearch) != string::npos )
+		{
 			return index;
+		}
+		index++;
 	}
 
 	// worst case: string not found
