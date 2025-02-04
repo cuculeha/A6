@@ -74,7 +74,6 @@ void readData (playerType list[])
 			inData >> list[i].numRushing;
 			inData.ignore();
 			
-			cout << "Entered Data\n";
 			cout << list[i].name << endl;
 			cout << list[i].position << endl;
 			cout << list[i].numTouchDowns << endl;
@@ -84,8 +83,6 @@ void readData (playerType list[])
 			cout << list[i].numRushing << endl;
 
 			i++;
-			cout << "press any key to continue\n";
-			cin.ignore();
 		}
 	inData.close();
 	return;
