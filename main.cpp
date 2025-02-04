@@ -241,7 +241,7 @@ void printPlayer (const string name, const char pos[], const int TDs, const int 
 {
 	cout << setw (20) << left << name;
 	cout << setw (5) << right << pos;
-	cout << setw (5) << right << TDS;
+	cout << setw (5) << right << TDs;
 	cout << setw (7) << right << catches;
 	cout << setw(7) << right << passYds;
 	cout << setw(7) << right << recvYads;
