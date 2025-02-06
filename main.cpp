@@ -81,7 +81,7 @@ if (input != '4' )
         			break;
      			 }	
 	cout << "\nPress any key to continue\n";
-	cin.ignore();
+	cin.ignore(100, '\n');
 	}
 
 	  else
