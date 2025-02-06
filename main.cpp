@@ -81,7 +81,7 @@ if (input != '4' )
         			break;
      			 }	
 	cout << "\nPress any key to continue\n";
-	cin.ignore(100, '\n');
+	cin.ignore();
 	}
 
 	  else
@@ -193,6 +193,7 @@ void editPlayer (playerType list [])
 		case '1':
 		cout << "Edit *New* Name : ";
 		getline (cin, list[index].name );
+		cin.ignore();
 		break;
 
 		case '2':
@@ -204,26 +205,31 @@ void editPlayer (playerType list [])
 		case '3':
 		cout << "Edit *New* Number of Touchdowns : ";
 		cin >> list[index].numTouchDowns;
+		cin.ignore();
 		break;
 		
 		case '4':
 		cout << "Edit *New* Number of Catches  : ";
 		cin >> list[index].numCatches;
+		cin.ignore();
 		break;
 
 		case '5':
 		cout << "Edit *New* Number of Passing Yards : ";
 		cin >> list[index].numPassing;
+		cin.ignore();
 		break;
 
 		case '6':
 		cout << "Edit *New* Number of Receiving Yards : ";
 		cin >> list[index].numReceiving;
+		cin.ignore();
 		break;
 
 		case '7':
 		cout << "Edit *New* Number of Rushing Yards : ";
 		cin >> list[index].numRushing ;
+		cin.ignore();
 		break;
 		
 		case '8':
