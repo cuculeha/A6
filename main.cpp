@@ -165,7 +165,7 @@ void editPlayer (playerType list [])
 	{
 		cout << "*****************************************\n";
 		cout << "* Edit a Player                         *\n";
-		cout << "*****************************************" << "CURRENT VALUES\n";
+		cout << "*****************************************" << " CURRENT VALUES\n";
 		cout << "* <1> Edit Name                         : " << list[index].name << endl;
 		cout << "* <2> Edit Position                     : " << list[index].position << endl;
 		cout << "* <3> Edit Number of Touchdowns         : " << list[index].numTouchDowns << endl;
