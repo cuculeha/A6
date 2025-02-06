@@ -28,6 +28,8 @@ int main (){
 
 	// Start displaying menu
   do {
+    system("clear");
+	  
     cout << "\n********************************************\n";
     cout << "Assignment A5 : Structs                    *\n";
     cout << "*                                          *\n";
@@ -82,7 +84,8 @@ int main (){
         cout << "Quitted\n";
       }
 
-	  system("clear");
+	cout << "\nPress any key to continue\n";
+	cin.ignore();
   }
 
   	while ( input != 4 );
