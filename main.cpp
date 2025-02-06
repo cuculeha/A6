@@ -68,7 +68,9 @@ int main (){
 		cout << "Data not found\n";	
 		cout << "***********************\n";
 	}
-		
+
+	cout << "\nPress any key to continue\n";
+	cin.ignore();
         break;
         
         case '2':
@@ -84,8 +86,6 @@ int main (){
         cout << "Quitted\n";
       }
 
-	cout << "\nPress any key to continue\n";
-	cin.ignore();
   }
 
   	while ( input != 4 );
@@ -231,6 +231,9 @@ void editPlayer (playerType list [])
 		}
 	
 	}
+
+	cout << "\nPress any key to continue\n";
+	cin.ignore();
 	return;
 }
 
@@ -257,8 +260,9 @@ void printTeam (const playerType list [])
 			printPlayer (list[i].name, list[i].position, list[i].numTouchDowns, list [i].numCatches, list[i]. numPassing,
 				list[i].numReceiving, list[i].numRushing);
 		}
-	cout << "\nPress any key to continue....\n";
+	cout << "\nPress any key to continue\n";
 	cin.ignore();
+	
 	return;
 }
 
