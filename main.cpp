@@ -11,12 +11,12 @@
 using namespace std;
 const int SIZE =  10 ;
 
-void readData (playerType list []);
+void readFile (playerType list []);
 int lookUpPlayer (const playerType list []);
 void editPlayer (playerType list []);
 void printTeam (const playerType list []);
 void printPlayer (const string name, const char pos[], const int TDs, const int catches, const int passYds, const int recvYads, const int rushYds);
-
+void writeFile (playerType list []);
 
 int main (){
   	int input;
@@ -24,7 +24,7 @@ int main (){
 	int foundPosition;
 	
 	// Read players data from the txt file
-	readData (teamPlayers);
+	readFile (teamPlayers);
 
 	// Start displaying menu
   do {
@@ -87,11 +87,13 @@ int main (){
 
   	while ( input != 4 );
 
+	// write the data on the file
+	writeFile (teamPlayers);
 	return 0;
 }
 
 
-void readData (playerType list[])
+void readFile (playerType list[])
 {
 	ifstream inData;
 	
@@ -109,7 +111,9 @@ void readData (playerType list[])
 
 			i++;
 		}
-	inData.close();
+	
+	inData.close(teamPlayers);
+	
 	return;
 }
 
@@ -264,4 +268,23 @@ void printPlayer (const string name, const char pos[], const int TDs, const int 
 	cout << setw(7) << right << passYds;
 	cout << setw(7) << right << recvYads;
 	cout << setw(7) << right << rushYds;
+}
+
+void writeFile (playerType list []);
+{
+	ofstream outData;
+	outData.open ("output.txt");
+
+	for (int i = 0; i < SIZE ; i++)
+		{
+			outData << list[i].name << endl;
+			outData << list[i].position << endl;
+			outData << list[i].numTouchDowns << endl;
+			outData << list[i].numCatches << endl;
+			outData << list[i].numPassing << endl;
+			outData << list[i].numReceiving << endl;
+			outData << list[i].numRushing << endl;
+		}
+	// close the file
+	outData.close();
 }
