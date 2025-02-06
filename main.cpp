@@ -40,14 +40,14 @@ int main (){
     cout << "********************************************\n";
     cout << "* Choice (1-4) : ";
     cin.get (input);
-    cin.ignore ();
+    cin.ignore (100, '\n');
 	  
 	// handle input validation
-	  while (input < 49 || input > 52 )
+	  while (input < '1' || input > '4' )
 		  {
 			  cout << input << " is an invalid choice. Only enter Choice (1-4) : ";
 			  cin.get (input);
-			  cin.ignore ();
+			  cin.ignore (100, '\n');
 		  }
 	  
     switch (input)
@@ -158,7 +158,7 @@ int lookUpPlayer (const playerType list [])
 void editPlayer (playerType list [])
 {
 	int index;     // index returned if search function found data
-	int choice;    // choice for editplayer menu
+	char choice;    // choice for editplayer menu
 	// Call look up function to get the index
 	index = lookUpPlayer (list);
 
@@ -177,55 +177,55 @@ void editPlayer (playerType list [])
 		cout << "* <8> Back To Main Menu                 *\n";
 		cout << "*****************************************\n";
 		cout << "* Choice (1-8) : ";
-		cin >> choice;
-		cin.ignore();
+		cin.get (choice);
+   		cin.ignore (100, '\n');
 
 		// handle input validation
 	 	 while (choice < 1 || choice > 8)
 		  {
 			  cout << "Only enter Choice (1-8) : ";
-			  cin >> choice;
-    			  cin.ignore();
+			  cin.get (choice);
+    			  cin.ignore (100, '\n');
 		  }
 		
 		switch (choice)
 		{
-		case 1:
+		case '1':
 		cout << "Edit *New* Name : ";
 		getline (cin, list[index].name );
 		break;
 
-		case 2:
+		case '2':
 		cout << "Edit *New* Position : ";
 		cin.get( list[index].position , 3 );
 		break;
 
-		case 3:
+		case '3':
 		cout << "Edit *New* Number of Touchdowns : ";
 		cin >> list[index].numTouchDowns;
 		break;
 		
-		case 4:
+		case '4':
 		cout << "Edit *New* Number of Catches  : ";
 		cin >> list[index].numCatches;
 		break;
 
-		case 5:
+		case '5':
 		cout << "Edit *New* Number of Passing Yards : ";
 		cin >> list[index].numPassing;
 		break;
 
-		case 6:
+		case '6':
 		cout << "Edit *New* Number of Receiving Yards : ";
 		cin >> list[index].numReceiving;
 		break;
 
-		case 7:
+		case '7':
 		cout << "Edit *New* Number of Rushing Yards : ";
 		cin >> list[index].numRushing ;
 		break;
 		
-		case 8:
+		case '8':
 			return;
 		break;	
 		}
