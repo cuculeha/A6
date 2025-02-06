@@ -28,7 +28,6 @@ int main (){
 
 	// Start displaying menu
   do {
-    system("clear");
 	  
     cout << "\n********************************************\n";
     cout << "Assignment A5 : Structs                    *\n";
@@ -49,44 +48,44 @@ int main (){
 			  cin.get (input);
 			  cin.ignore (100, '\n');
 		  }
-	  
-    switch (input)
-      {
-        case '1':
-        // Look up for player
-	foundPosition = lookUpPlayer (teamPlayers);
-        if (foundPosition != -1)
+if (input != '4' )
 	{
-		cout << "***********************\n";
-		cout << "Data found\n";
-		cout << "***********************\n";
-	}
+    		switch (input)
+      			{
+        			case '1':
+        			// Look up for player
+				foundPosition = lookUpPlayer (teamPlayers);
+       	 			if (foundPosition != -1)
+					{
+						cout << "***********************\n";
+						cout << "Data found\n";
+						cout << "***********************\n";
+					}
 
-	else
-	{
-		cout << "***********************\n";
-		cout << "Data not found\n";	
-		cout << "***********************\n";
-	}
-
+				else
+					{
+						cout << "***********************\n";
+						cout << "Data not found\n";	
+						cout << "***********************\n";
+					}
+				 break;
+        
+        			case '2':
+				// Edit a player					
+				editPlayer (teamPlayers);
+        			break;
+        
+        			case '3':
+        			printTeam (teamPlayers);
+        			break;
+     			 }	
 	cout << "\nPress any key to continue\n";
 	cin.ignore();
-        break;
-        
-        case '2':
-	// Edit a player
-		editPlayer (teamPlayers);
-        break;
-        
-        case '3':
-        printTeam (teamPlayers);
-        break;
-        
-        case '4':
-        cout << "Quitted\n";
-      }
+	}
 
-  }
+	  else
+		cout << "Program quitted, writing data into an output file...\n";
+}
 
   	while ( input != '4' );
 
@@ -232,8 +231,6 @@ void editPlayer (playerType list [])
 	
 	}
 
-	cout << "\nPress any key to continue\n";
-	cin.ignore();
 	return;
 }
 
