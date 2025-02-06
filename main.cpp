@@ -28,7 +28,6 @@ int main (){
 
 	// Start displaying menu
   do {
-	system ("clear");
     cout << "\n********************************************\n";
     cout << "Assignment A5 : Structs                    *\n";
     cout << "*                                          *\n";
@@ -82,7 +81,8 @@ int main (){
         case 4:
         cout << "Quitted\n";
       }
-          
+
+	  system("clear");
   }
 
   	while ( input != 4 );
