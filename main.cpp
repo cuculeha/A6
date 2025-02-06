@@ -39,13 +39,13 @@ int main (){
     cout << "* <4> To Quit                              *\n";
     cout << "********************************************\n";
     cout << "* Choice (1-4) : ";
-    cin.get (input, 1);
+    cin.get (input, 2);
 	  
 	// handle input validation
 	  while (input < 49 || input > 52 )
 		  {
 			  cout << input << " is an invalid choice. Only enter Choice (1-4) : ";
-			  cin.get (input, 1);
+			  cin.get (input, 2);
 		  }
 	  
     switch (input)
