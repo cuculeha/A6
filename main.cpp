@@ -57,9 +57,10 @@ if (input != '4' )
 				foundPosition = lookUpPlayer (teamPlayers);
        	 			if (foundPosition != -1)
 					{
-						cout << "***********************\n";
+						cout << "*****************************\n";
 						cout << "Data found\n";
-						cout << "***********************\n";
+						cout << "Name : teamPlayers[foundPosition].name";
+						cout << "*****************************\n";
 					}
 
 				else
@@ -127,7 +128,7 @@ int lookUpPlayer (const playerType list [])
 	string uppercaseToSearch;         // hold temporary strings of uppercase search name
 
 	
-	cout << "Search : ";
+	cout << "Search Player Name : ";
 	getline (cin, toSearch );
 
 	// Attempting to find the partial string in data.
