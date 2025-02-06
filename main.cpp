@@ -19,7 +19,7 @@ void printPlayer (const string name, const char pos[], const int TDs, const int 
 void writeFile (playerType list []);
 
 int main (){
-  	int input;
+  	char input;
 	playerType teamPlayers[10];
 	int foundPosition;
 	
@@ -39,20 +39,18 @@ int main (){
     cout << "* <4> To Quit                              *\n";
     cout << "********************************************\n";
     cout << "* Choice (1-4) : ";
-    cin >> input;
-    cin.ignore();
+    cin.get (input, 1);
 	  
 	// handle input validation
-	  while (input < 1 || input > 4)
+	  while (input < 49 || input > 52 )
 		  {
-			  cout << "Only enter Choice (1-4) : ";
-			  cin >> input;
-    			  cin.ignore();
+			  cout << input << " is an invalid choice. Only enter Choice (1-4) : ";
+			  cin.get (input, 1);
 		  }
-	   
+	  
     switch (input)
       {
-        case 1:
+        case '1':
         // Look up for player
 	foundPosition = lookUpPlayer (teamPlayers);
         if (foundPosition != -1)
@@ -71,16 +69,16 @@ int main (){
 		
         break;
         
-        case 2:
+        case '2':
 	// Edit a player
 		editPlayer (teamPlayers);
         break;
         
-        case 3:
+        case '3':
         printTeam (teamPlayers);
         break;
         
-        case 4:
+        case '4':
         cout << "Quitted\n";
       }
 
