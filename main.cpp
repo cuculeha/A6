@@ -112,7 +112,7 @@ void readFile (playerType list[])
 			i++;
 		}
 	
-	inData.close(teamPlayers);
+	inData.close();
 	
 	return;
 }
@@ -270,7 +270,7 @@ void printPlayer (const string name, const char pos[], const int TDs, const int 
 	cout << setw(7) << right << rushYds;
 }
 
-void writeFile (playerType list []);
+void writeFile (playerType list [])
 {
 	ofstream outData;
 	outData.open ("output.txt");
