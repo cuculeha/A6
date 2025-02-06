@@ -59,8 +59,8 @@ if (input != '4' )
 					{
 						cout << "*****************************\n";
 						cout << "Data found\n";
-						cout << "Name : teamPlayers[foundPosition].name";
-						cout << "*****************************\n";
+						cout << "Name : " << teamPlayers[foundPosition].name ;
+						cout << "\n*****************************\n";
 					}
 
 				else
