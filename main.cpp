@@ -197,6 +197,7 @@ void editPlayer (playerType list [])
 		case '2':
 		cout << "Edit *New* Position : ";
 		cin.get( list[index].position , 3 );
+		cin.ignore();
 		break;
 
 		case '3':
