@@ -88,7 +88,7 @@ int main (){
 
   }
 
-  	while ( input != 4 );
+  	while ( input != '4' );
 
 	// write the data on the file
 	writeFile (teamPlayers);
