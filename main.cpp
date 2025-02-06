@@ -40,12 +40,14 @@ int main (){
     cout << "********************************************\n";
     cout << "* Choice (1-4) : ";
     cin.get (input);
+    cin.ignore ();
 	  
 	// handle input validation
 	  while (input < 49 || input > 52 )
 		  {
 			  cout << input << " is an invalid choice. Only enter Choice (1-4) : ";
 			  cin.get (input);
+			  cin.ignore ();
 		  }
 	  
     switch (input)
